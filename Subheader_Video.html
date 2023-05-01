@@ -1,0 +1,221 @@
+<html>
+<head>
+
+<!-- Get Noto Sans font-->
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<!-- Get bootstrap 3 (which is included in ArcGIS Hub)-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- Start copying here for CSS/Style-->
+<style>
+  .hub-body h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .hub-body h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 23px;
+    margin-bottom: 12px;
+    color: #005C97;
+  }
+  
+  .hub-body h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 23px;
+    margin-bottom: 12px;
+    color: #005C97;
+  }
+  
+  .hub-body h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 23px;
+    margin-bottom: 12px;
+    color: #005C97;
+  }
+  
+  .hub-body p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .hub-body hr {
+    height:2px;
+    border:none;
+    color:#234075;
+    background-color:#234075;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .hub-body {
+    overflow: hidden;
+  }
+  
+  .no-underline-link:hover {
+    text-decoration: none;
+  }
+  
+  video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .video-wrapper {
+    border: 2px solid #000;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+
+  .banner-heading {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    background-color: rgba(0, 94, 153, 0.8);
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .banner-heading h1{
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .welcome-text p{
+    font-size: 24px;
+    color: #003366;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .content-row {
+    padding: 0 10% 20px 10%;
+  }
+  
+@media only screen and (max-width: 576px){
+  .banner-heading {
+    width: 100%;
+    margin: 80px 5px;
+  }
+}
+
+@media only screen and (max-width: 1420px){
+  .banner-heading {
+    width: 75%;
+  }
+}
+
+  .card-base-vert{
+    display: flex;
+    flex-direction: column;
+    height:400px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(26, 26, 26, 0.2);
+    border-radius: 18px;
+  }
+  
+  .card-base-vert .card-image {
+    border-radius: 12px 12px 0px 0px;
+    width: 100%;
+    height: 50%;
+    border-bottom: 11px solid #008FB4;
+  }
+  
+  .card-base-vert .card-image img{
+    border-radius: 12px 12px 0px 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-base-vert .card-body {
+    height: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: auto;
+  }
+
+  .card-base-vert:hover {
+    outline: rgba(80, 202, 247, 1) solid 2px;
+  }
+
+  .card-body h3 {
+    color: #005C97;
+    text-align: left;
+  }
+
+  .card-body p {
+    color: #005C97;
+  }
+
+  .card-body a {
+    color: #005C97;
+  }
+  
+@media only screen and (max-width: 991px){
+  .card-base-vert{
+    height: 275px;
+  }
+  
+  .card-base-vert .card-image {
+    height: 30%;
+  }
+  
+  .card-base-vert .card-body {
+    height: 70%;
+  }
+}
+</style>
+
+<!-- Stop copying here for CSS/Style-->
+
+</head>
+<body>
+
+<!-- Start copying here for HTML-->
+<div class="hub-body">
+    <div class="video-wrapper" aria-label="Decorative video header. No audio.">
+      <video playsinline="" autoplay="autoplay" muted="muted" preload="auto">
+        <source src="https://nrs.objectstore.gov.bc.ca/xedyjn/Media/Pictures/ElkValley/home_img/elk_valley_homevideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    
+      <div class="banner-heading">
+        <div class="banner-block">
+          <h1>Improving water quality and protecting ecosystems</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Stop copying here for HTML-->
+
+</body>
+</html>

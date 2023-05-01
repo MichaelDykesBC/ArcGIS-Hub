@@ -1,0 +1,211 @@
+<html>
+<head>
+
+<!-- Get Noto Sans font-->
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<!-- Get bootstrap 3 (which is included in ArcGIS Hub)-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- Start copying here for CSS/Style-->
+<style>
+    .cover {
+      width: 97.3vw;
+      overflow:hidden;
+      display:flex;
+      align-items: center;
+      height: 30vh;
+      position: relative;
+      z-index:0;
+      /*filter:opacity(60%);*/
+      /*float: right;*/
+    }
+    
+    .cover-title {
+      animation-name: FadeIn;
+      animation-duration: 3s;
+      transition-timing-function: linear;
+    }
+    
+    .animated-title {
+      /*color: white;*/
+      /*font-family: 'Urbanist', sans-serif;*/
+      height: 90vmin;
+      left: 35%;
+      position: absolute;
+      top: 70%;
+      transform: translate(-50%, -50%);
+      width: 66%;
+    }
+    
+    .animated-title > div {
+      height: 50%;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      /*width: 40%;*/
+    }
+    
+    .animated-title > div div {
+      position: absolute;
+    }
+    
+    .animated-title > div.text-top {
+      /*border-bottom: 1vmin solid #f05901;*/
+      border-bottom: 5px solid #fabb1e;
+    }
+    
+    .animated-title > div.text-top div {
+      animation: showTopText 2s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      bottom: 0;
+      transform: translate(0, 100%);
+    }
+    
+    .animated-title > div.text-top h2 {
+      /*font-family: 'Lexend Deca', Verdana, Arial, sans-serif;*/
+      font-size: 3em;
+      font-weight: 500;
+      color: #003366;
+      /*text-shadow: 0px 4px 3px rgba(0,0,0,0.4),*/
+      /*             0px 8px 13px rgba(0,0,0,0.1),*/
+      /*             0px 18px 23px rgba(0,0,0,0.1);*/
+    }
+    
+    .animated-title > div.text-bottom {
+      bottom: 0;
+    }
+    
+    .animated-title > div.text-bottom h2 {
+      /*font-family: 'Lexend Deca', Verdana, Arial, sans-serif;*/
+      animation: showBottomText 2s;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      top: 0;
+      transform: translate(0, -250%);
+      font-size: 2em;
+      font-weight: 500;
+      color: white;
+      text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                   0px 8px 13px rgba(0,0,0,0.1),
+                   0px 18px 23px rgba(0,0,0,0.1);
+    }
+    
+      .all-texts {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .breadcrumb {
+        /*font-family: 'Lexend Deca', Verdana, Arial, sans-serif;*/
+        font-size: 1rem;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 2rem;
+        margin-top: 1rem;
+      }
+      
+      
+      ol > li > a {
+        color: black;
+      }
+      
+      
+      a:hover {
+        text-decoration: none;
+        color: white;
+        pointer-events: auto;
+      }
+      
+      ol > li {
+        color: #003366 !important;
+        text-decoration: none;
+      }
+    
+      .disclaimer >h2 {
+        color: #fff;
+      }
+    
+    @keyframes FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-moz-keyframes FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-webkit-keyframes FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-o-keyframes FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @-ms-keyframes FadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes showTopText {
+      0% { transform: translate3d(0, 100%, 0); }
+      // 40%, 60% { transform: translate3d(0, 50%, 0); }
+      100% { transform: translate3d(0, 0, 0); }
+    }
+    
+    </style>
+
+<!-- Stop copying here for CSS/Style-->
+
+</head>
+<body>
+
+<!-- Start copying here for HTML-->
+<div class="cover">
+    <div class="all-texts">
+      <div class="cover-title">
+        <div class="animated-title">
+          <div class="text-top">
+            <div>
+              <h2>About the Elk Valley</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">About the Elk Valley</li>
+      </ol>
+    </div>
+  </div>
+<!-- Stop copying here for HTML-->
+
+</body>
+</html>

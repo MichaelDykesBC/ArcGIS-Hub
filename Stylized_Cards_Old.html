@@ -1,0 +1,262 @@
+<html>
+<head>
+
+<!-- Get Noto Sans font-->
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<!-- Get bootstrap 3 (which is included in ArcGIS Hub)-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- Start copying here for CSS/Style-->
+<style>
+  .sub-header-main{
+    text-align: left;
+    margin-bottom: 2em;
+  }
+
+  .sub-header-main h2{
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  .sub-header-main p{
+    font-weight: normal;
+    font-size: 1em;
+  }
+  
+  .bier_card {
+    box-shadow: 3px 3px 10px 0 rgb(76 76 76 / 50%);
+    -moz-box-shadow: 3px 3px 10px 0 rgb(76 76 76 / 50%);
+    -webkit-box-shadow: 3px 3px 10px 0 rgb(76 76 76 / 50%);
+    -o-box-shadow: 3px 3px 10px 0 rgb(76 76 76 / 50%);
+    transition: transform 200ms ease-in-out 25ms;
+  }
+
+  .bier_card .bier_card_background {
+    background-color: rgba(56, 89, 138, 0.7);
+    border: 2px solid rgba(0, 51, 102, 0.8);
+  }
+  
+  .bier_card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    height: 150px;
+    max-width:95%;
+  }
+  
+  .bier_card h3{
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 150px;
+    font-weight: bold;
+  }
+  
+  .bier_card .card-content{
+    padding-top: 0;
+    height: 220px;
+  }
+
+  .bier_card .card-content h4{
+    color: #ffffff;
+    text-align: center;
+    height: 70px;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 0 2px;
+    text-decoration: none
+  }
+
+  .bier_card .card-content p{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 10px;
+    height: 60px;
+    overflow: hidden;
+  }
+
+  .bier_card .card-content .center-block{
+    color: #ffffff;
+    background-color: rgba(0, 51, 102, 1);
+    pointer-events: none;
+    margin-top: 25px;
+    font-weight: bold;
+    border-radius: 5px; 
+  }
+
+  .bier_card:hover {
+    transform: translateX(0px) translateY(-5px);
+  }
+
+  .card_highway {
+    background-color: rgba(0, 120, 105, 1);
+  }
+  
+  .card_highway_background {
+    border: 3px solid rgba(255, 255, 255, 1);
+    border-radius: 15px; 
+  }
+  
+  .card_highway img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    height: 150px;
+    max-width:95%;
+  }
+
+  .card_highway .card-content .center-block{
+    background-color: rgba(0, 120, 105, 1);
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+
+  .card_highway_background:hover > .card-content .center-block{
+      background-color: rgba(255, 255, 255, 1);
+      color: rgba(0, 120, 105, 1);
+      border: 1px solid rgba(0, 120, 105, 1);
+  } 
+
+  .card_abbotsford {
+    background-color: rgba(164, 164, 164, 1);
+    border-top: 5px solid rgba(122, 77, 44, 1);
+    border-right: 8px solid rgba(122, 77, 44, 1);
+    border-top-right-radius: 15px; 
+    border-top-left-radius: 15px; 
+  }
+  
+  .card_abbotsford img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 125px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    max-width:95%;
+  }
+
+  .card_abbotsford .card-content .center-block{
+    background-color: rgba(164, 164, 164, 1);
+    border: 2px solid rgba(122, 77, 44, 1);
+  }
+
+  .card_abbotsford:hover > .card-content .center-block{
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(122, 77, 44, 1);
+    border: 1px solid rgba(122, 77, 44, 1);
+  } 
+  
+  .card_tnrd {
+    background-color: rgba(0, 0, 0, 1);
+    border: 5px solid rgba(120, 162, 47, 1);
+    border-radius: 15px; 
+  }
+  
+  .card_tnrd img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    max-width:95%;
+  }
+
+  .card_tnrd .card-content .center-block{
+    background-color: rgba(0, 0, 0, 1);
+    border: 2px solid rgba(120, 162, 47, 1);
+  }
+
+  .card_tnrd:hover > .card-content .center-block{
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(120, 162, 47, 1);
+    border: 1px solid rgba(120, 162, 47, 1);
+  } 
+</style>
+
+<!-- Stop copying here for CSS/Style-->
+
+</head>
+<body>
+
+<!-- Start copying here for HTML-->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="sub-header-main">
+      <div class="calcite-web">
+        <h2 style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); color: rgba(255, 255, 255, 1);">Maps and Applications by Impacted Areas</h2>
+      </div>
+    </div>
+  </div>
+  
+  <a href="/pages/abbotsford" style="outline: none;">
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="calcite-web">
+      <div class="bier_card">
+        <div class="card_abbotsford">
+           <img alt="Image Here" class="card-thumbnail" src="https://bcgov03.maps.arcgis.com/sharing/rest/content/items/3d7b6ec0963c4b9c998866e55e46daac/data">
+            <div class="card-content">
+                <div class="caption">
+                  <div class="gallery-card-title">
+                    <h4>City of Abbotsford</h4>
+                  </div>
+                  <p class="gallery-card-desc-snippet">View the impact of the atmospheric river events to the <b>City of Abbotsford</b>.</p>
+                  <div class="btn btn-default center-block">Launch</div>
+                </div>
+              </div>  
+            </div>
+        </div>
+    </div>
+  </div>
+  </a>
+  
+  <a href="/pages/highway-8" style="outline: none;">
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="calcite-web">
+      <div class="bier_card">
+        <div class="card_highway">
+          <div class="card_highway_background">
+           <img alt="Image Here" class="card-thumbnail" src="https://bcgov03.maps.arcgis.com/sharing/rest/content/items/868a63ab37184839b045d1193c9309aa/data" style="height: 200px;">
+            <div class="card-content">
+                <div class="caption">
+                  <div class="gallery-card-title">
+                    <h4>Highway 8</h4>
+                  </div>
+                  <p class="gallery-card-desc-snippet">View the impact of the atmospheric river events to <b>Highway 8</b>.</p>
+                  <div class="btn btn-default center-block">Launch</div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </a>
+  
+  <a href="/pages/tnrd" style="outline: none;">
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="calcite-web">
+      <div class="bier_card">
+        <div class="card_tnrd">
+           <img alt="Image Here" class="card-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIcgxKnaFb03R4l3TpJfmMdEaM-4alXWfnQ&usqp=CAU">
+            <div class="card-content">
+                <div class="caption">
+                  <div class="gallery-card-title">
+                    <h4>Thompson-Nicola Regional District</h4>
+                  </div>
+                  <p class="gallery-card-desc-snippet">View the impact of the atmospheric river events to the <b>Thompson-Nicola Regional District</b>.</p>
+                  <div class="btn btn-default center-block">Launch</div>
+                </div>
+              </div>  
+            </div>
+        </div>
+    </div>
+  </div>
+  </a>
+  
+<!-- Stop copying here for HTML-->
+
+</body>
+</html>

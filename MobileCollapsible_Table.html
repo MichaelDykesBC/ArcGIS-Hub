@@ -1,0 +1,166 @@
+<html>
+<head>
+
+<!-- Get Noto Sans font-->
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<!-- Get bootstrap 3 (which is included in ArcGIS Hub)-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- Start copying here for CSS/Style-->
+<style>
+    .facility-table h3{
+  color: #000000;
+  margin: 5px auto;
+}
+
+.facility-table figcaption {
+  font-size: 16px;
+  font-style: italic;
+  color: #000000;
+}
+  
+.facility-table table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.facility-table table caption {
+  font-weight: 700;
+  color: #000000;
+  margin: 5px auto;
+  font-size: 1.5em;
+}
+
+.facility-table table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+.facility-table table th,
+.facility-table table td {
+  color: #000000;
+  padding: .625em;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.facility-table table td p {
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.facility-table table th {
+  color: #ffffff;
+  background: #007FA3;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+@media screen and (max-width: 1200px) {
+  .facility-table table {
+    border: 0;
+  }
+
+  .facility-table table caption {
+    font-size: 1.3em;
+  }
+  
+  .facility-table table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .facility-table table th,
+  .facility-table table td {
+    border: unset;
+  }
+  
+  .facility-table table tr {
+    border-left: 11px solid #007FA3;
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  .facility-table table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  .facility-table table td p {
+    font-size: 13px;
+    text-align: right;
+  }
+  
+  .facility-table table td p::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+  
+  .facility-table table td:last-child {
+    border-bottom: 0;
+  }
+}
+</style>
+<!-- Stop copying here for CSS/Style-->
+
+</head>
+<body>
+
+<!-- Start copying here for HTML-->
+<div class="nav-anchor" id="summary"></div>
+<div class="hub-body">
+  <h2>At-a-glance summary</h2>
+  <div class="facility-table">
+    <figure>
+        <table>
+          <caption>2021 water quality and fish tissue status in Koocanusa Reservoir</caption>
+          <thead>
+            <tr>
+              <th scope="col">Location</th>
+              <th scope="col">Attainment of Selenium Target</th>
+              <th scope="col">Attainment of Nitrate Target</th>
+              <th scope="col">Attainment of Sulphate Target</th>
+              <th scope="col">Fish Tissue Selenium</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Location:"><p data-label="Location:">Koocanusa Order Station</p></td>
+              <td data-label="Attainment of Selenium Target:"><p data-label="Attainment of Selenium Target:" style="background: #FFA500">83%</p></td>
+              <td data-label="Attainment of Nitrate Target:"><p data-label="Attainment of Nitrate Target:" style="background: #75B343">100%</p></td>
+              <td data-label="Attainment of Sulphate Target:"><p data-label="Attainment of Sulphate Target:" style="background: #75B343">100%</p></td>
+              <td data-label="Fish Tissue Selenium:"><p data-label="Fish Tissue Selenium:" style="background: #FFFF00">Elevated</p></td>
+              <td data-label="Notes:"><p data-label="Notes:">Fish tissue showed higher concentrations of selenium downstream of the Elk River; however, average concentrations were below levels where fish health may start to be affected. Selenium levels have not yet stabilized.</p></td>
+            </tr>
+          </tbody>
+        </table>
+      <figcaption>Source: Koocanusa Reservoir Monitoring Program Annual Data Summary Report - 2021</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="hub-body-half">
+  <hr>
+</div>
+<!-- Stop copying here for HTML-->
+
+</body>
+</html>
